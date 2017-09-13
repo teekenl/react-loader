@@ -1,0 +1,25 @@
+{
+  "name": "react-loader",
+  "version": "1.0.0",
+  "description": "A lightweight and easy-to-use loading written in React JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teekenl/react-loader.git"
+  },
+  "keywords": [
+    "React",
+    "Loading",
+    "react-loading",
+    "widget"
+  ],
+  "author": "teekenl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teekenl/react-loader/issues"
+  },
+  "homepage": "https://github.com/teekenl/react-loader#readme"
+}
