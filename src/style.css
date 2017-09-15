@@ -1,0 +1,27 @@
+html,body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loader_wrapper {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.loader_ {
+    border-radius: 50%;
+    border: 1px solid red;
+    animation: loading 5s ease-in-out 2s infinite;
+
+}
+
+/* Loading animation */
+@keyframes loading {
+    0% {
+       asd
+    }
+
+}
