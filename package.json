@@ -2,9 +2,11 @@
   "name": "react-loader",
   "version": "1.0.0",
   "description": "A lightweight and easy-to-use loading written in React JS",
-  "main": "index.js",
+  "main": "src/react-loader.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build & node react-loader.js",
+    "build": "webpack -p",
+    "test": "mocha --compiler js:babel-register"
   },
   "repository": {
     "type": "git",
