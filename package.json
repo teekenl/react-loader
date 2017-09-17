@@ -2,10 +2,11 @@
   "name": "react-loader",
   "version": "1.0.0",
   "description": "A lightweight and easy-to-use loading written in React JS",
-  "main": "src/react-loader.js",
+  "main": "dist/react-loader.js",
   "scripts": {
-    "start": "npm run build & node react-loader.js",
-    "build": "webpack -p",
+    "deploy": "npm run build",
+    "start": "NODE_ENV=development webpack --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --config webpack.production.config.js",
     "test": "mocha --compiler js:babel-register"
   },
   "repository": {
@@ -15,6 +16,8 @@
   "keywords": [
     "React",
     "Loading",
+    "react-component",
+    "spin loader",
     "react-loading",
     "widget"
   ],
@@ -25,6 +28,8 @@
   },
   "homepage": "https://github.com/teekenl/react-loader#readme",
   "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -36,6 +41,8 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "mocha": "^3.5.3",
+    "uglify-js": "^3.1.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.8.2"
   }
