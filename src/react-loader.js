@@ -25,10 +25,18 @@ export class Loader extends Component {
     }
 
     render(){
-        const nDiv = [2,2];
-        {nDiv.map(::this.render)}
+        const classes = classnames({
+            loader: true,
+            ['loader-' + this.props.size]: this.props.size !== 'md',
+            'loader-active': this.props.active,
+            'loader-hidden': !this.props.active
+        },this.props.className);
 
-        return <div>s</div>
+        return <div className={classes}>
+                <div className={`loader-inner ${this.props.type}`}>
+
+                </div>
+            </div>
     }
 
 }
