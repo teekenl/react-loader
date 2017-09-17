@@ -1,0 +1,8 @@
+.babelrc
+.eslintrc
+.gitignore
+*.log
+*.md
+webpack.config.js
+webpack.production.config.js
+/src/

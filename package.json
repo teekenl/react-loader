@@ -1,13 +1,18 @@
 {
   "name": "react-loader",
   "version": "1.0.0",
-  "description": "A lightweight and easy-to-use loading written in React JS",
+  "description": "A lightweight and easy-to-use loading bar written in React JS",
   "main": "dist/react-loader.js",
   "scripts": {
     "deploy": "npm run build",
     "start": "NODE_ENV=development webpack --config webpack.config.js",
     "build": "NODE_ENV=production webpack --config webpack.production.config.js",
-    "test": "mocha --compiler js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "babel-build": "babel src -d dist",
+    "prepublish": "npm run build",
+    "lint": "eslint src/**",
+    "gulp-lint": "gulp lint",
+    "lint:watch": "esw -w src/**"
   },
   "repository": {
     "type": "git",
@@ -37,9 +42,17 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^4.7.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-watch": "^3.1.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
     "mocha": "^3.5.3",
     "uglify-js": "^3.1.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
