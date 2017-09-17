@@ -41,6 +41,9 @@ module.exports =[
             path: path.resolve('dist'),
             filename: 'example.js'
         },
+        devServer: {
+            inline: true
+        },
         module: {
             loaders: [
                 {
