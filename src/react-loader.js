@@ -34,7 +34,7 @@ export class Loader extends Component {
 
         return <div className={classes}>
                 <div className={`loader-inner ${this.props.type}`}>
-
+    
                 </div>
             </div>
     }
