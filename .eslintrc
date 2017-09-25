@@ -13,6 +13,7 @@
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
+      classes: true,
       jsx: true,
       generators: true,
       experimentalObjectRestSpread: true

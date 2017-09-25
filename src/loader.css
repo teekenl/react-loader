@@ -606,8 +606,6 @@
 .ball-triangle-path > div:nth-child(1) {
     -webkit-animation-name: ball-triangle-path-1;
     animation-name: ball-triangle-path-1;
-    -webkit-animation-delay: 0;
-    animation-delay: 0;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-timing-function: ease-in-out;
@@ -617,8 +615,6 @@
 .ball-triangle-path > div:nth-child(2) {
     -webkit-animation-name: ball-triangle-path-2;
     animation-name: ball-triangle-path-2;
-    -webkit-animation-delay: 0;
-    animation-delay: 0;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-timing-function: ease-in-out;
@@ -628,8 +624,6 @@
 .ball-triangle-path > div:nth-child(3) {
     -webkit-animation-name: ball-triangle-path-3;
     animation-name: ball-triangle-path-3;
-    -webkit-animation-delay: 0;
-    animation-delay: 0;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-timing-function: ease-in-out;
@@ -685,10 +679,10 @@
         -webkit-transform: translateY(30px);
         transform: translateY(30px); }
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-transform: scale(1);
-        transform: scale(1); } }
+        -webkit-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+        }
+}
 
 @-webkit-keyframes ball-pulse-rise-odd {
     0% {
@@ -704,10 +698,10 @@
         -webkit-transform: translateY(-30px);
         transform: translateY(-30px); }
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-transform: scale(0.75);
-        transform: scale(0.75); } }
+        -webkit-transform: translateY(0) scale(0.75);
+        transform: translateY(0) scale(0.75);
+    }
+}
 
 @keyframes ball-pulse-rise-odd {
     0% {
@@ -743,8 +737,7 @@
     animation-timing-function: cubic-bezier(0.15, 0.46, 0.9, 0.6);
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    -webkit-animation-delay: 0;
-    animation-delay: 0; }
+}
 .ball-pulse-rise > div:nth-child(2n) {
     -webkit-animation-name: ball-pulse-rise-even;
     animation-name: ball-pulse-rise-even; }
@@ -825,8 +818,7 @@
     animation-name: ball-grid-beat;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    -webkit-animation-delay: 0;
-    animation-delay: 0; }
+}
 
 @-webkit-keyframes ball-grid-pulse {
     0% {
@@ -915,8 +907,7 @@
     animation-name: ball-grid-pulse;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    -webkit-animation-delay: 0;
-    animation-delay: 0; }
+}
 
 @-webkit-keyframes ball-spin-fade-loader {
     50% {
@@ -1338,8 +1329,7 @@
     animation-name: line-scale-party;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    -webkit-animation-delay: 0;
-    animation-delay: 0; }
+}
 
 @-webkit-keyframes line-scale-pulse-out {
     0% {

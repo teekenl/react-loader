@@ -1,14 +1,14 @@
-const path = require(path);
+const path = require('path');
 const webpack = require('webpack');
-const uglify = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports =[
     {
-        // context
-        entry: '../src/react-loader.js',
+        entry: './src/react-loader.js',
         output: {
             path: path.resolve('dist'),
-            filename: 'react-loader.js'
+            filename: 'react-loader.js',
+            publicPath: '/dist/'
         },
         module: {
             loaders: [
@@ -20,26 +20,26 @@ module.exports =[
                 },
                 {
                     test: /\.jsx$/,
-                    loader: 'babel-lodaer',
+                    loader: 'babel-loader',
                     include: path.join(__dirname, 'src'),
                     exclude: /node_modules/
+                },
+                {
+                    test: /\.css$/,
+                    include: path.join(__dirname, 'src'),
+                    loader: 'style-loader!css-loader'
                 }
             ]
         },
-        plugins: [
-            new webpack.EnvironmentPlugin([  // Setup environment for development
-                'NODE_ENV',
-            ]),
-            new UglifyJsPlugin({sourceMap: true})
-        ]
     },
     {
         // uncomment this line if your index.html is located inside the app folder
         // context:  __dirname + '/app'
-        entry: '../src/example.js',
+        entry: './src/text.js',
         output: {
             path: path.resolve('dist'),
-            filename: 'example.js'
+            filename: 'bundle.js',
+            publicPath: '/dist/'
         },
         devServer: {
             inline: true
