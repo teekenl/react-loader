@@ -1,9 +1,12 @@
 import React, { Component } from 'react-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import css from './loader.css';
 
 export class Loader extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   // propTypes initialization.
   static propTypes = {
     type: PropTypes.string,
