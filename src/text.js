@@ -4,6 +4,9 @@ import Loader from './react-loader';
 import css from './loader.css';
 
 class TestLoader extends Component {
+  constructor(props){
+    super(props);
+  }
   render(){
     return(
       <div>
